@@ -14,13 +14,20 @@ but we see a lot of different formats with almost no integration.
 Comparable work 
 --------------- 
 
-LOCI Bio-Formats defines a file format that can store a lot of
-metadata from microscopy images. It however only deals with light
-microscopy.
+[LOCI Bio-Formats](http://loci.wisc.edu/software/bio-formats) defines
+a file format that can store a lot of metadata from microscopy
+images. It however only deals with light microscopy.
 
-There are ontologies that (partly) do the same: BAO, BIRNLEX, BRO, EP,
-GALEN, NPO, OBI and QIBO. These have to be integrated in some way, we
-have to investigate what works best.
+There are ontologies that (partly) do the same:
+[BAO](http://bioassayontology.org/wp/),
+[NeuroLex](http://www.birncommunity.org/tools-catalog/neurolex-formerly-birnlex/),
+[BRO](http://bioportal.bioontology.org/ontologies/BRO),
+[EP](http://bioportal.bioontology.org/ontologies/EP),
+[GALEN](http://bioportal.bioontology.org/ontologies/GALEN),
+[NPO](http://www.nano-ontology.org/),
+[OBI](http://obi-ontology.org/page/Main_Page) and
+[QIBO](http://bioportal.bioontology.org/ontologies/QIBO). These have
+to be integrated in some way, we have to investigate what works best.
 
 Contributing
 ------------
