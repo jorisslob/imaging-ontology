@@ -1,5 +1,7 @@
 package nl.liacs;
 
+import java.io.File;
+import java.net.URL;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -29,10 +31,12 @@ public class AppTest
     }
 
     /**
-     * Rigourous Test :-)
+     * Check that the ontology is named correctly
      */
-    public void testApp()
+    public void testOntologyName()
     {
-        assertTrue( true );
+	URL url = Thread.currentThread().getContextClassLoader().getResource("imaging-ontology.owl");
+	File file = new File(url.getPath());
+        assertEquals(file.getName(),"imaging-ontology.owl");
     }
 }

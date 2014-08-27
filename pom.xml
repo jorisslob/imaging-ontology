@@ -9,6 +9,16 @@
 
   <name>imaging-ontology</name>
   <url>http://maven.apache.org</url>
+  <build>
+    <resources>
+      <resource>
+	<directory>.</directory>
+	<includes>
+	  <include>imaging-ontology.owl</include>
+	</includes>
+      </resource>
+    </resources>
+  </build>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
