@@ -5,11 +5,11 @@ The imaging ontology is an ontology that seeks to capture provenance
 of microscopy images of various modalities.
 
 The ontology aims to increase the amount of usable metadata that can
-be communicated between different research groups, i.e. an image
+be communicated between different research groups, e.g. an image
 analysis group gets images from a microscopy lab, but all the
-acquisition information is stored in lab books. As microscopes become
-more and more digital, automatic metadata generation gets better, but
-we see a lot of different formats with almost no integration.
+acquisition information is stored in lab books. As more and more
+microscopes become digital, automatic metadata generation gets better,
+but we see a lot of different formats with almost no integration.
 
 Comparable work 
 --------------- 
