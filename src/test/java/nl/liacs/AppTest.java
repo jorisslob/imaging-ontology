@@ -58,6 +58,9 @@ public class AppTest extends TestCase {
         assertTrue(error_msg, model.hasLoadedImport(prov_uri));
     }
 
+    /**
+     * Check if the ontology is valid and clean (here called consistent)
+     */
     public void testConsistency() {
         Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
         InfModel inf = ModelFactory.createInfModel(reasoner, model);
