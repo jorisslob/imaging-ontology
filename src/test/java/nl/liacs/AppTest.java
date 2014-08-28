@@ -1,8 +1,11 @@
 package nl.liacs;
 
+import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.rdf.model.Property;
+import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.reasoner.Reasoner;
 import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.reasoner.ValidityReport;
@@ -67,5 +70,21 @@ public class AppTest extends TestCase {
         ValidityReport validation = inf.validate();
         assertTrue(validation.isValid());
         assertTrue(validation.isClean());
+    }
+    
+    /**
+     * Check for definitions in every class
+     */
+    public void testDefinitions() {
+        String def = "http://www.w3.org/ns/prov#definition";
+        Property p = model.getOntProperty(def);
+        for(OntClass cl:model.listClasses().toList()) {
+            if(cl.isAnon()) continue;
+            // TODO: Find a better way to check for equality to OWL:Thing
+            if(cl.getLocalName().equals("Thing")) continue; 
+            Statement statement = cl.getProperty(p);
+            String error_msg = "Class " + cl.getLocalName() + " does not have a definition";
+            assertTrue(error_msg, statement!=null);
+        }
     }
 }
