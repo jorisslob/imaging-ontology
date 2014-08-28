@@ -1,7 +1,11 @@
 package nl.liacs;
 
 import com.hp.hpl.jena.ontology.OntModel;
+import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
+import com.hp.hpl.jena.reasoner.Reasoner;
+import com.hp.hpl.jena.reasoner.ReasonerRegistry;
+import com.hp.hpl.jena.reasoner.ValidityReport;
 import java.io.File;
 import java.net.URL;
 import junit.framework.Test;
@@ -14,6 +18,7 @@ import junit.framework.TestSuite;
 public class AppTest extends TestCase {
     private final URL onto_url;
     private final String FILENAME = "imaging-ontology.owl";
+    private final OntModel model;
     /**
      * Create the test case
      *
@@ -24,6 +29,8 @@ public class AppTest extends TestCase {
         Thread my_thread = Thread.currentThread();
         ClassLoader my_classloader = my_thread.getContextClassLoader();
       	onto_url = my_classloader.getResource("imaging-ontology.owl");
+        model = ModelFactory.createOntologyModel();
+        model.read(onto_url.toString());
     }
 
     /**
@@ -46,10 +53,16 @@ public class AppTest extends TestCase {
      * Check if PROV is imported
      */
     public void testImportPROV()  {
-        OntModel m = ModelFactory.createOntologyModel();
-        m.read(onto_url.toString());
         String error_msg = "Ontology doesn't import PROV-O 20130430";
         String prov_uri = "http://www.w3.org/ns/prov-o-20130430";
-        assertTrue(error_msg, m.hasLoadedImport(prov_uri));
+        assertTrue(error_msg, model.hasLoadedImport(prov_uri));
+    }
+
+    public void testConsistency() {
+        Reasoner reasoner = ReasonerRegistry.getOWLReasoner();
+        InfModel inf = ModelFactory.createInfModel(reasoner, model);
+        ValidityReport validation = inf.validate();
+        assertTrue(validation.isValid());
+        assertTrue(validation.isClean());
     }
 }
