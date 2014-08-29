@@ -2,6 +2,7 @@
 
 
 <!DOCTYPE rdf:RDF [
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
@@ -12,6 +13,7 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#"
      xml:base="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -19,6 +21,98 @@
         <owl:versionIRI rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology/0.2.0"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Atomic_Force_Microscope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Atomic_Force_Microscope">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope"/>
+        <prov:definition xml:lang="en">An Atomic Force Microscope or Scanning Force Microscope is a very high-resolution type of Scanning Probe Microscope, with demonstrated resolution on the order of fractions of a nanometer, more than 1000 times better than the optical diffraction limit.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Bright_Field_Microscope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Bright_Field_Microscope">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Optical_Microscope"/>
+        <prov:definition xml:lang="en">A Bright Field Microscope is the simplest of all the Optical Microscopes.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Confocal_Microscope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Confocal_Microscope">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescent_Microscope"/>
+        <prov:definition xml:lang="en">A Confocal Microscope uses an optical imaging technique used to increase optical resolution and contrast of a micrograph by adding a spatial pinhole placed at the confocal plane of the lens to eliminate out-of-focus light.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Microscope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Microscope">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope"/>
+        <prov:definition xml:lang="en">An Electron Microscope is a Microscope that uses accelerated electrons as a source of illumination.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescent_Microscope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescent_Microscope">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Optical_Microscope"/>
+        <prov:definition xml:lang="en">A Fluorescence Microscope is an Optical Microscope that uses fluorescence and phosphorescence instead of, or in addition to, reflection and absorption to study properties of organic or inorganic substances.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope">
+        <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+        <prov:definition xml:lang="en">A Microscope is an instrument used to see objects that are too small for the naked eye.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Optical_Microscope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Optical_Microscope">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope"/>
+        <prov:definition xml:lang="en">An Optical Microscope, often referred to as a light microscope, is a type of microscope which uses visible light and a system of lenses to magnify images of small samples.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Scanning_Electron_Microscope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Scanning_Electron_Microscope">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Microscope"/>
+        <prov:definition xml:lang="en">A Scanning Electron Microscope is a type of electron microscope that produces images of a sample by scanning it with a focussed beam of electrons.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Transmission_Electron_Microscope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Transmission_Electron_Microscope">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Microscope"/>
+        <prov:definition xml:lang="en">A Transmission Electron Microscope is a microscope in which a beam of electrons is transmitted through an ulta-thin specimen, interacting with the specimen as it passes through.</prov:definition>
+    </owl:Class>
 </rdf:RDF>
 
 
