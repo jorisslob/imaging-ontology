@@ -27,6 +27,35 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasImagingMode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasImagingMode">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasInteraction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasInteraction">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -38,8 +67,30 @@
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Atomic_Force_Microscope -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Atomic_Force_Microscope">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasImagingMode"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Scanning_Probe"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasInteraction"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Mechanical_Force"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope"/>
         <prov:definition xml:lang="en">An Atomic Force Microscope or Scanning Force Microscope is a very high-resolution type of Scanning Probe Microscope, with demonstrated resolution on the order of fractions of a nanometer, more than 1000 times better than the optical diffraction limit.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Bright_Field -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Bright_Field">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
     </owl:Class>
     
 
@@ -47,8 +98,30 @@
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Bright_Field_Microscope -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Bright_Field_Microscope">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasImagingMode"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Bright_Field"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasInteraction"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Absorbance"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Optical_Microscope"/>
         <prov:definition xml:lang="en">A Bright Field Microscope is the simplest of all the Optical Microscopes.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Confocal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Confocal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
     </owl:Class>
     
 
@@ -56,8 +129,30 @@
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Confocal_Microscope -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Confocal_Microscope">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasImagingMode"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Confocal"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasInteraction"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescent_Microscope"/>
         <prov:definition xml:lang="en">A Confocal Microscope uses an optical imaging technique used to increase optical resolution and contrast of a micrograph by adding a spatial pinhole placed at the confocal plane of the lens to eliminate out-of-focus light.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Absorbance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Absorbance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
     </owl:Class>
     
 
@@ -71,11 +166,53 @@
     
 
 
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Epifluorescence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Epifluorescence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescent_Microscope -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescent_Microscope">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasInteraction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Optical_Microscope"/>
         <prov:definition xml:lang="en">A Fluorescence Microscope is an Optical Microscope that uses fluorescence and phosphorescence instead of, or in addition to, reflection and absorption to study properties of organic or inorganic substances.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Mechanical_Force -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Mechanical_Force">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
     </owl:Class>
     
 
@@ -98,6 +235,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Absorbance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Absorbance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Scanning_Electron_Microscope -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Scanning_Electron_Microscope">
@@ -107,9 +252,31 @@
     
 
 
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Scanning_Probe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Scanning_Probe">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Transmission_Electron_Microscope -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Transmission_Electron_Microscope">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasImagingMode"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Bright_Field"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasInteraction"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Absorbance"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Microscope"/>
         <prov:definition xml:lang="en">A Transmission Electron Microscope is a microscope in which a beam of electrons is transmitted through an ulta-thin specimen, interacting with the specimen as it passes through.</prov:definition>
     </owl:Class>
