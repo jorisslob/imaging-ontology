@@ -9,6 +9,7 @@ import com.hp.hpl.jena.rdf.model.Statement;
 import com.hp.hpl.jena.reasoner.Reasoner;
 import com.hp.hpl.jena.reasoner.ReasonerRegistry;
 import com.hp.hpl.jena.reasoner.ValidityReport;
+import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import java.io.File;
 import java.net.URL;
 import junit.framework.Test;
@@ -79,12 +80,41 @@ public class AppTest extends TestCase {
         String def = "http://www.w3.org/ns/prov#definition";
         Property p = model.getOntProperty(def);
         for(OntClass cl:model.listClasses().toList()) {
-            if(cl.isAnon()) continue;
+            if(cl.isAnon()) continue; // Skip Anonymous classes
             // TODO: Find a better way to check for equality to OWL:Thing
             if(cl.getLocalName().equals("Thing")) continue; 
             Statement statement = cl.getProperty(p);
             String error_msg = "Class " + cl.getLocalName() + " does not have a definition";
             assertTrue(error_msg, statement!=null);
+        }
+    }
+
+    /**
+     * Check for key microscopes mentioned in SMBM paper
+     */
+    public void testMicroscopes() {
+        String[] expected = {"Fluorescent_Microscope","Confocal_Microscope",
+                            "Transmission_Electron_Microscope",
+                            "Scanning_Electron_Microscope",
+                            "Atomic_Force_Microscope"};
+        Boolean[] found = new Boolean[expected.length];
+        for(int i=0;i<found.length;i++) {
+            found[i] = false;
+        }
+
+        for(OntClass cl:model.listClasses().toList()) {
+            if(cl.isAnon()) continue; // Skip Anonymous classes
+            for(int i=0; i<expected.length;i++) {
+                if(cl.getLocalName().equals(expected[i])) {
+                    found[i] = true;
+                }
+            }
+        }
+
+        for(int i=0;i<found.length;i++) {
+            if (!found[i]) {
+                fail(expected[i] + " was not found in ontology");
+            }
         }
     }
 }
