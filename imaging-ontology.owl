@@ -136,6 +136,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Bright_Field">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://bioontology.org/projects/ontologies/birnlex#birnlex_2255</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://dbpedia.org/page/Bright_field_microscopy</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://ontology.neuinfo.org/NIF/DigitalEntities/NIF-Investigation.owl#birnlex_2255</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.bioontology.org/ontology/RCD/X79me</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/257425005</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/CHMO_0000104</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/FBbi_00000243</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.owl-ontologies.com/Ontology1298855822.owl#Bright-field</rdfs:seeAlso>
         <prov:definition xml:lang="en">Simplest of all the optical microscopy illumination techniques.</prov:definition>
     </owl:Class>
     
@@ -168,6 +176,15 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Confocal">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://dbpedia.org/page/Confocal_microscopy</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://dicom.nema.org/resources/ontology/DCM/114207</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#Confocal_Microscopy</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://phenomebrowser.net/ontologies/mesh/mesh.owl#D018613</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.bioontology.org/ontology/MESH/D018613</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/ERO_0000200</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/FBbi_00000251</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.bioassayontology.org/bao#BAO_0000453</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.projecthalo.com/aura#Confocal-Microscopy</rdfs:seeAlso>
         <prov:definition xml:lang="en">Optical imaging technique used to increase optical resolution and contrast of a micrograph by adding a spatial pinhole placed at the confocal plane of the lens to eliminate out-of-focus light.</prov:definition>
     </owl:Class>
     
@@ -200,6 +217,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Absorbance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Interaction"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://en.wikipedia.org/wiki/Transmission_electron_microscopy</rdfs:seeAlso>
         <prov:definition xml:lang="en">The absorption of electrons is the way in which electrons are taken up by matter.</prov:definition>
     </owl:Class>
     
@@ -209,6 +227,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Excitation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Interaction"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://dbpedia.org/page/Electron_excitation</rdfs:seeAlso>
         <prov:definition xml:lang="en">Emission of secondary electrons by atoms excited by a primary electron beam.</prov:definition>
     </owl:Class>
     
@@ -218,6 +237,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Interaction">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.ammrf.org.au/myscope/sem/background/concepts/interactions.php</rdfs:seeAlso>
         <prov:definition xml:lang="en">An interaction that has at least some electrons as a component.</prov:definition>
     </owl:Class>
     
@@ -242,6 +262,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Epifluorescence">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">Epifluorescence illumination method for specimen microscopy.</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/698790009</rdfs:seeAlso>
         <prov:definition xml:lang="en">Excitation of the fluorophore and detection of the fluorescence are done through the same light path (i.e. through the objective).</prov:definition>
     </owl:Class>
     
@@ -251,6 +273,18 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Interaction"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://dbpedia.org/page/Fluorescence</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16586</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://phenomebrowser.net/ontologies/mesh/mesh.owl#G01.358.500.505.650.665.500</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.bioontology.org/ontology/CSP/2138-3281</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.bioontology.org/ontology/MESH/D005453</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.bioontology.org/ontology/RCD/X7A1Y</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/258099003</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/ID_0000053</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/PATO_0000018</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/REX_0000043</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://sweet.jpl.nasa.gov/2.3/procChemical.owl#Fluorescence</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.projecthalo.com/aura#Fluorescence</rdfs:seeAlso>
         <prov:definition xml:lang="en">Emission of light by a substance that has absorbed light or other electomagnetic radiation.</prov:definition>
     </owl:Class>
     
@@ -291,6 +325,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Mechanical_Force">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.bioontology.org/ontology/RCD/Xa3Bx</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/285653008</rdfs:seeAlso>
         <prov:definition xml:lang="en">A mechanical force is an influence which tends to change the motion of an object, caused by a mechanical contact.</prov:definition>
     </owl:Class>
     
@@ -324,6 +360,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Absorbance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Interaction"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://dbpedia.org/page/Absorption_(electromagnetic_radiation)</rdfs:seeAlso>
         <prov:definition xml:lang="en">The absorption of electromagnetic radiation is the way in which the energy of a photon is taken up by matter, typically the electrons of an atom.</prov:definition>
     </owl:Class>
     
@@ -333,6 +370,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Interaction">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://en.wikipedia.org/wiki/Category:Scattering,_absorption_and_radiative_transfer_(optics)</rdfs:seeAlso>
         <prov:definition xml:lang="en">An interaction that has at least some electromagnetic component.</prov:definition>
     </owl:Class>
     
@@ -365,6 +403,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Scanning_Probe">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://dbpedia.org/page/Scanning_probe_microscopy</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://internano.org/taxonomy#INTERNANO_138</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://phenomebrowser.net/ontologies/mesh/mesh.owl#D020527</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.bioontology.org/ontology/MESH/D020527</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/ERO_0001635</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/FBbi_00000344</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/FIX_0000121</rdfs:seeAlso>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.bioassayontology.org/bao#BAO_0000459</rdfs:seeAlso>
         <prov:definition xml:lang="en">Forms images of surfaces using a physical probe that scans the specimen.</prov:definition>
     </owl:Class>
     

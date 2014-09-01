@@ -13,6 +13,7 @@ import com.hp.hpl.jena.reasoner.ValidityReport;
 import com.hp.hpl.jena.util.iterator.ExtendedIterator;
 import java.io.File;
 import java.net.URL;
+import java.util.List;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -160,6 +161,23 @@ public class AppTest extends TestCase {
         for(int i=0;i<found.length;i++) {
             if (!found[i]) {
                 fail(expected[i] + " was not found in ontology");
+            }
+        }
+    }
+
+    /**
+     * Adjacent classes should refer to external resources using RDF:seeAlso.
+     */
+    public void testSeeAlso() {
+        String modeURI = IRI+"#Imaging_Mode";
+        String InteractionURI = IRI+"#Interaction";
+        OntClass ImagingMode = model.getOntClass(modeURI);
+        OntClass Interaction = model.getOntClass(InteractionURI);
+        List<OntClass> classes = ImagingMode.listSubClasses().toList();
+        classes.addAll(Interaction.listSubClasses().toList());
+        for(OntClass cl:classes) {
+            if(cl.listSeeAlso().toList().isEmpty()) {
+                fail(cl.getLocalName() + " does not have an rdf:seeAlso");
             }
         }
     }
