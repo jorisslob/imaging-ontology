@@ -23,6 +23,7 @@ public class AppTest extends TestCase {
     private final URL onto_url;
     private final String FILENAME = "imaging-ontology.owl";
     private final OntModel model;
+    private final String IRI = "http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology";
     /**
      * Create the test case
      *
@@ -114,6 +115,21 @@ public class AppTest extends TestCase {
         for(int i=0;i<found.length;i++) {
             if (!found[i]) {
                 fail(expected[i] + " was not found in ontology");
+            }
+        }
+    }
+    
+    /**
+     * All microscope subclasses should have more axioms than just the 
+     * assertion that it is a subclass of Microscope.
+     */
+    public void testAxiomsOnMicroscopes() {
+        String microscopeURI = IRI+"#Microscope";
+        OntClass microscope = model.getOntClass(microscopeURI);
+        ExtendedIterator<OntClass> subclasses = microscope.listSubClasses();
+        for(OntClass cl:subclasses.toList()) {
+            if(cl.listEquivalentClasses().toSet().isEmpty()) {
+                fail(cl.getLocalName() + " has no axioms defining it");
             }
         }
     }

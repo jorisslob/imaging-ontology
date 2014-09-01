@@ -154,8 +154,26 @@
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Absorbance -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Absorbance">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Interaction"/>
         <prov:definition xml:lang="en">The absorption of electrons is the way in which electrons are taken up by matter.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Excitation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Excitation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Interaction"/>
+        <prov:definition xml:lang="en">Emission of secondary electrons by atoms excited by a primary electron beam.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Interaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Interaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+        <prov:definition xml:lang="en">An interaction that has at least some electrons as a component.</prov:definition>
     </owl:Class>
     
 
@@ -163,6 +181,12 @@
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Microscope -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Microscope">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasInteraction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Interaction"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope"/>
         <prov:definition xml:lang="en">An Electron Microscope is a Microscope that uses accelerated electrons as a source of illumination.</prov:definition>
     </owl:Class>
@@ -181,7 +205,7 @@
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Interaction"/>
         <prov:definition xml:lang="en">Emission of light by a substance that has absorbed light or other electomagnetic radiation.</prov:definition>
     </owl:Class>
     
@@ -239,6 +263,12 @@
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Optical_Microscope -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Optical_Microscope">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasInteraction"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Interaction"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope"/>
         <prov:definition xml:lang="en">An Optical Microscope, often referred to as a light microscope, is a type of microscope which uses visible light and a system of lenses to magnify images of small samples.</prov:definition>
     </owl:Class>
@@ -248,8 +278,17 @@
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Absorbance -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Absorbance">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Interaction"/>
         <prov:definition xml:lang="en">The absorption of electromagnetic radiation is the way in which the energy of a photon is taken up by matter, typically the electrons of an atom.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Interaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Interaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+        <prov:definition xml:lang="en">An interaction that has at least some electromagnetic component.</prov:definition>
     </owl:Class>
     
 
@@ -257,6 +296,20 @@
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Scanning_Electron_Microscope -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Scanning_Electron_Microscope">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasImagingMode"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Scanning_Probe"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasInteraction"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Excitation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Microscope"/>
         <prov:definition xml:lang="en">A Scanning Electron Microscope is a type of electron microscope that produces images of a sample by scanning it with a focussed beam of electrons.</prov:definition>
     </owl:Class>
