@@ -2,6 +2,7 @@ package nl.liacs;
 
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
+import com.hp.hpl.jena.ontology.OntProperty;
 import com.hp.hpl.jena.rdf.model.InfModel;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Property;
@@ -130,6 +131,35 @@ public class AppTest extends TestCase {
         for(OntClass cl:subclasses.toList()) {
             if(cl.listEquivalentClasses().toSet().isEmpty()) {
                 fail(cl.getLocalName() + " has no axioms defining it");
+            }
+        }
+    }
+
+    /**
+     * All relations mentioned in the SMBM paper should be in the ontology.
+     * hasImagingMode, hasInteraction, NumericalAperture, Emission wavelength
+     * and Pinhole size
+     */
+    public void testProperties() {
+        String[] expected = {"hasImagingMode", "hasInteraction",
+                             "numericalAperture", "emissionWavelength",
+                             "pinholeSize"};
+                Boolean[] found = new Boolean[expected.length];
+        for(int i=0;i<found.length;i++) {
+            found[i] = false;
+        }
+
+        for(OntProperty prop:model.listAllOntProperties().toList()) {
+            for(int i=0; i<expected.length;i++) {
+                if(prop.getLocalName().equals(expected[i])) {
+                    found[i] = true;
+                }
+            }
+        }
+
+        for(int i=0;i<found.length;i++) {
+            if (!found[i]) {
+                fail(expected[i] + " was not found in ontology");
             }
         }
     }

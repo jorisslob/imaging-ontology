@@ -56,6 +56,51 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#emissionWavelength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#emissionWavelength">
+        <rdfs:comment xml:lang="en">Value in nm</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescent_Microscope"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#numericalAperture -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#numericalAperture">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Optical_Microscope"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#pinholeSize -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#pinholeSize">
+        <rdfs:comment xml:lang="en">value in micrometers</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasImagingMode"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Confocal"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
