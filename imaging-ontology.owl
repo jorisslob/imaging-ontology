@@ -12,13 +12,13 @@
 
 <rdf:RDF xmlns="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#"
      xml:base="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology">
-        <owl:versionIRI rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology/0.2.0"/>
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology/0.3.0"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
     </owl:Ontology>
     
@@ -91,6 +91,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Bright_Field">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
+        <prov:definition xml:lang="en">Simplest of all the optical microscopy illumination techniques.</prov:definition>
     </owl:Class>
     
 
@@ -122,6 +123,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Confocal">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
+        <prov:definition xml:lang="en">Optical imaging technique used to increase optical resolution and contrast of a micrograph by adding a spatial pinhole placed at the confocal plane of the lens to eliminate out-of-focus light.</prov:definition>
     </owl:Class>
     
 
@@ -153,6 +155,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Absorbance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+        <prov:definition xml:lang="en">The absorption of electrons is the way in which electrons are taken up by matter.</prov:definition>
     </owl:Class>
     
 
@@ -170,6 +173,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Epifluorescence">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
+        <prov:definition xml:lang="en">Excitation of the fluorophore and detection of the fluorescence are done through the same light path (i.e. through the objective).</prov:definition>
     </owl:Class>
     
 
@@ -178,6 +182,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+        <prov:definition xml:lang="en">Emission of light by a substance that has absorbed light or other electomagnetic radiation.</prov:definition>
     </owl:Class>
     
 
@@ -199,13 +204,17 @@
 
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode">
+        <prov:definition xml:lang="en">A specific configuration of a microscope that causes an image to be formed of a specimen.</prov:definition>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction">
+        <prov:definition xml:lang="en">A physical process between at least two entities.</prov:definition>
+    </owl:Class>
     
 
 
@@ -213,6 +222,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Mechanical_Force">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+        <prov:definition xml:lang="en">A mechanical force is an influence which tends to change the motion of an object, caused by a mechanical contact.</prov:definition>
     </owl:Class>
     
 
@@ -239,6 +249,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Absorbance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Interaction"/>
+        <prov:definition xml:lang="en">The absorption of electromagnetic radiation is the way in which the energy of a photon is taken up by matter, typically the electrons of an atom.</prov:definition>
     </owl:Class>
     
 
@@ -256,6 +267,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Scanning_Probe">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode"/>
+        <prov:definition xml:lang="en">Forms images of surfaces using a physical probe that scans the specimen.</prov:definition>
     </owl:Class>
     
 
