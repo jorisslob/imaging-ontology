@@ -99,7 +99,8 @@ public class AppTest extends TestCase {
         String[] expected = {"Fluorescent_Microscope","Confocal_Microscope",
                             "Transmission_Electron_Microscope",
                             "Scanning_Electron_Microscope",
-                            "Atomic_Force_Microscope"};
+                            "Atomic_Force_Microscope", "Optical_Microscope",
+                            "Bright_Field_Microscope", "Electron_Microscope"};
         Boolean[] found = new Boolean[expected.length];
         for(int i=0;i<found.length;i++) {
             found[i] = false;
@@ -144,7 +145,8 @@ public class AppTest extends TestCase {
     public void testProperties() {
         String[] expected = {"hasImagingMode", "hasInteraction",
                              "numericalAperture", "emissionWavelength",
-                             "pinholeSize"};
+                             "pinholeSize", "hasResolution", 
+                             "hasOpticalResolution"};
                 Boolean[] found = new Boolean[expected.length];
         for(int i=0;i<found.length;i++) {
             found[i] = false;
