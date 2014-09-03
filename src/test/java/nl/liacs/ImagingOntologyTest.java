@@ -57,15 +57,6 @@ public class ImagingOntologyTest extends TestCase {
     }
     
     /**
-     * Check if PROV is imported
-     */
-    public void testImportPROV()  {
-        String error_msg = "Ontology doesn't import PROV-O 20130430";
-        String prov_uri = "http://www.w3.org/ns/prov-o-20130430";
-        assertTrue(error_msg, model.hasLoadedImport(prov_uri));
-    }
-
-    /**
      * Check if the ontology is valid and clean (here called consistent)
      */
     public void testConsistency() {

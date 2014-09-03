@@ -25,6 +25,7 @@
 	<directory>.</directory>
 	<includes>
 	  <include>imaging-ontology.owl</include>
+	  <include>prov-example.rdf</include>
 	</includes>
       </resource>
     </resources>
