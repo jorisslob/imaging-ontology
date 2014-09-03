@@ -21,7 +21,7 @@ import junit.framework.TestSuite;
 /**
  * Unit test for simple App.
  */
-public class AppTest extends TestCase {
+public class ImagingOntologyTest extends TestCase {
     private final URL onto_url;
     private final String FILENAME = "imaging-ontology.owl";
     private final OntModel model;
@@ -31,7 +31,7 @@ public class AppTest extends TestCase {
      *
      * @param testName name of the test case
      */
-    public AppTest( String testName ) {
+    public ImagingOntologyTest( String testName ) {
         super( testName );
         Thread my_thread = Thread.currentThread();
         ClassLoader my_classloader = my_thread.getContextClassLoader();
@@ -44,7 +44,7 @@ public class AppTest extends TestCase {
      * @return the suite of tests being tested
      */
     public static Test suite() {
-        return new TestSuite( AppTest.class );
+        return new TestSuite( ImagingOntologyTest.class );
     }
 
     /**
