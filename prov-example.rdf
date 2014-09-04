@@ -17,7 +17,9 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:prov="http://www.w3.org/ns/prov#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100">
+        <owl:imports rdf:resource="file:imaging-ontology.owl"/>
+    </owl:Ontology>
     
 
 
@@ -66,11 +68,28 @@
     
 
 
-    <!-- http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100#microscope1 -->
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100#bellerophon_institute -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100#microscope1">
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100#bellerophon_institute">
+        <rdf:type rdf:resource="&prov;Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100#ganymede2000_microscope -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100#ganymede2000_microscope">
         <rdf:type rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope"/>
-        <prov:hadActivity rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100#microscope1"/>
+        <prov:wasAttributedTo rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100#bellerophon_institute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100#measurement1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100#measurement1">
+        <rdf:type rdf:resource="&prov;Activity"/>
+        <prov:used rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100#ganymede2000_microscope"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
