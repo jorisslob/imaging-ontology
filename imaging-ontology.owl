@@ -290,6 +290,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Evanescent_Waves -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Evanescent_Waves">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Interaction"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://dbpedia.org/page/Evanescent_wave</rdfs:seeAlso>
+        <prov:definition xml:lang="en">An evanescent wave is a near-field wave with an intensity that exhibits exponential decay without absorption as a function of the distance from the boundary at which the wave was formed.</prov:definition>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence">
@@ -307,6 +317,16 @@
         <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://sweet.jpl.nasa.gov/2.3/procChemical.owl#Fluorescence</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.projecthalo.com/aura#Fluorescence</rdfs:seeAlso>
         <prov:definition xml:lang="en">Emission of light by a substance that has absorbed light or other electomagnetic radiation.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence_Resonance_Energy_Transfer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence_Resonance_Energy_Transfer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence"/>
+        <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://dbpedia.org/page/F%C3%B6rster_resonance_energy_transfer</rdfs:seeAlso>
+        <prov:definition xml:lang="en">Förster resonance energy transfer (FRET), fluorescence resonance energy transfer (FRET), resonance energy transfer (RET) or electronic energy transfer (EET) is a mechanism describing energy transfer between two light-sensitive molecules (chromophores).</prov:definition>
     </owl:Class>
     
 
@@ -358,6 +378,29 @@
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope">
         <rdfs:subClassOf rdf:resource="&prov;Entity"/>
         <prov:definition xml:lang="en">A Microscope is an instrument used to see objects that are too small for the naked eye.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#NSOM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#NSOM">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasImagingMode"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Scanning_Probe"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasInteraction"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Evanescent_Waves"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Optical_Microscope"/>
+        <prov:definition xml:lang="en">Near-field scanning optical microscopy (NSOM/SNOM) is a microscopy technique for nanostructure investigation that breaks the far field resolution limit by exploiting the properties of evanescent waves.</prov:definition>
     </owl:Class>
     
 
