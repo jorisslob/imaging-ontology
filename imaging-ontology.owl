@@ -53,6 +53,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasManufacturer -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasManufacturer">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Commercial_Company"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -189,6 +198,16 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Optical_Microscope"/>
         <prov:definition xml:lang="en">A Bright Field Microscope is the simplest of all the Optical Microscopes.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Commercial_Company -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Commercial_Company">
+        <rdfs:subClassOf rdf:resource="&prov;Organization"/>
+        <prov:definition xml:lang="en">An organization that is involved in commercialization of detection instruments</prov:definition>
+        <rdfs:comment xml:lang="en">Same use as BAO (BioAssayOntology)</rdfs:comment>
     </owl:Class>
     
 
