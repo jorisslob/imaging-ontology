@@ -83,6 +83,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#excitationWavelength -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#excitationWavelength">
+        <rdfs:comment xml:lang="en">Value in nm</rdfs:comment>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescent_Microscope"/>
+        <rdfs:range rdf:resource="&xsd;decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasOpticalResolution -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasOpticalResolution">
