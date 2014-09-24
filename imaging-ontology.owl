@@ -158,6 +158,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Aberration_Correction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Aberration_Correction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Objective_Designation"/>
+        <prov:definition xml:lang="en">Chromatic aberration correction (achromatic, fluorite or apochromatic) characteristic of an objective</prov:definition>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Air -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Air">
@@ -347,6 +356,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Flat-Field_Correction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Flat-Field_Correction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Objective_Designation"/>
+        <prov:definition xml:lang="en">Field curvature correction characteristic of an objective</prov:definition>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Fluorescence">
@@ -469,6 +487,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Objective_Designation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Objective_Designation">
+        <prov:definition xml:lang="en">Inscribed parameters on the outer housing of an microscope objective</prov:definition>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Oil -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Oil">
@@ -549,6 +575,15 @@
         <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://purl.obolibrary.org/obo/FIX_0000121</rdfs:seeAlso>
         <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://www.bioassayontology.org/bao#BAO_0000459</rdfs:seeAlso>
         <prov:definition xml:lang="en">Forms images of surfaces using a physical probe that scans the specimen.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Specialized_Optical_Properties -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Specialized_Optical_Properties">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Objective_Designation"/>
+        <prov:definition xml:lang="en">Objective has optimized performance under certain conditions, these markings indicate which conditions.</prov:definition>
     </owl:Class>
     
 
