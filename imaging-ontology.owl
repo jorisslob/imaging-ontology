@@ -44,6 +44,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasImmersionMedium -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasImmersionMedium">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Immersion_Medium"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasInteraction -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#hasInteraction">
@@ -146,6 +155,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Air -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Air">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Immersion_Medium"/>
+        <prov:definition xml:lang="en">Mixture of gasses found in the atmosphere of Earth.</prov:definition>
+    </owl:Class>
     
 
 
@@ -375,10 +393,27 @@
     
 
 
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Glycerol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Glycerol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Immersion_Medium"/>
+        <prov:definition xml:lang="en">A triol with a structure of propane substituted at positions 1, 2 and 3 by hydroxy groups.</prov:definition>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Imaging_Mode">
         <prov:definition xml:lang="en">A specific configuration of a microscope that causes an image to be formed of a specimen.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Immersion_Medium -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Immersion_Medium">
+        <prov:definition xml:lang="en">For high resolving power, the numerical aperture (NA) of an objective needs to be greater than 1. This also requires an immersion medium with a refractive index greater than 1, i.e. other than air. Common immersion media are oil, water and glycerol.</prov:definition>
     </owl:Class>
     
 
@@ -430,6 +465,15 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Optical_Microscope"/>
         <prov:definition xml:lang="en">Near-field scanning optical microscopy (NSOM/SNOM) is a microscopy technique for nanostructure investigation that breaks the far field resolution limit by exploiting the properties of evanescent waves.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Oil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Oil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Immersion_Medium"/>
+        <prov:definition xml:lang="en">A viscous liquid state at ambient temperatures or slightly warmer, and is both hydrophobic and lipophilic.</prov:definition>
     </owl:Class>
     
 
@@ -528,6 +572,15 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Microscope"/>
         <prov:definition xml:lang="en">A Transmission Electron Microscope is a microscope in which a beam of electrons is transmitted through an ulta-thin specimen, interacting with the specimen as it passes through.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Water -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Water">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Immersion_Medium"/>
+        <prov:definition xml:lang="en">An inorganic hydroxy compound that has formula H2O.</prov:definition>
     </owl:Class>
 </rdf:RDF>
 

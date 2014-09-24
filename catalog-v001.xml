@@ -4,9 +4,8 @@
     <uri id="Imports Wizard Entry" name="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology/0.4.0" uri="imaging-ontology.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.w3.org/ns/prov-o-20130430" uri="http://www.w3.org/ns/prov-o"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1411300844671" name="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology" uri="imaging-ontology.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1411300844671" name="http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100" uri="prov-example.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1411300844671" name="shadowed:http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology" uri="target/classes/imaging-ontology.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1411300844671" name="shadowed:http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100" uri="target/classes/prov-example.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1411558230731" name="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology" uri="imaging-ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1411558230731" name="http://www.semanticweb.org/jslob/ontologies/2014/8/untitled-ontology-100" uri="prov-example.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1411558230731" name="shadowed:http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology" uri="target/classes/imaging-ontology.owl"/>
     </group>
 </catalog>
