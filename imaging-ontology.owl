@@ -617,6 +617,49 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Immersion_Medium"/>
         <prov:definition xml:lang="en">An inorganic hydroxy compound that has formula H2O.</prov:definition>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Leica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Leica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Commercial_Company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Nikon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Nikon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Commercial_Company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Olympus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Olympus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Commercial_Company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Zeiss -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Zeiss">
+        <rdf:type rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Commercial_Company"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
