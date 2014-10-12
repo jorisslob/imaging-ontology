@@ -18,7 +18,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:prov="http://www.w3.org/ns/prov#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology">
-        <owl:versionIRI rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology/0.4.0"/>
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology/0.5.0"/>
         <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
     </owl:Ontology>
     
@@ -290,6 +290,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Device">
+        <rdfs:subClassOf rdf:resource="&prov;Agent"/>
+        <prov:definition xml:lang="en">A constructed tool used in an experiment</prov:definition>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Absorbance -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Electron_Absorbance">
@@ -352,6 +361,15 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Photon_Interaction"/>
         <rdfs:seeAlso rdf:datatype="&xsd;anyURI">http://dbpedia.org/page/Evanescent_wave</rdfs:seeAlso>
         <prov:definition xml:lang="en">An evanescent wave is a near-field wave with an intensity that exhibits exponential decay without absorption as a function of the distance from the boundary at which the wave was formed.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Experiment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Experiment">
+        <rdfs:subClassOf rdf:resource="&prov;Activity"/>
+        <prov:definition xml:lang="en">An experiment in this context is a process using at least one device that results in a measurement.</prov:definition>
     </owl:Class>
     
 
@@ -444,6 +462,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Measurement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Measurement">
+        <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+        <prov:definition xml:lang="en">The data file that comes out of a experiment with a device</prov:definition>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Mechanical_Force -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Mechanical_Force">
@@ -458,7 +485,7 @@
     <!-- http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Microscope">
-        <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/jslob/ontologies/2014/7/imaging-ontology#Device"/>
         <prov:definition xml:lang="en">A Microscope is an instrument used to see objects that are too small for the naked eye.</prov:definition>
     </owl:Class>
     
